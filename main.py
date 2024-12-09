@@ -26,7 +26,10 @@ class MyWidget(QMainWindow):
         self.update()
 
     def drawer(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        r = random.randrange(0, 255)
+        g = random.randrange(0, 255)
+        b = random.randrange(0, 255)
+        qp.setBrush(QColor(r, g, b))
         a = random.randrange(5, 300)
         qp.drawEllipse(random.randrange(-10, 280), random.randrange(-10, 280), a, a)
 
